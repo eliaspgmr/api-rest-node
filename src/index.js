@@ -1,17 +1,14 @@
 const express  = require('express')
-const mongoose = require('mongoose')
 const cors     = require('cors')
 const routes   = require('./routes')
+//const mongoose = require('mongoose')
 
 const app = express()
 
 /**
  * Connection to the MogoDB Data Base Cluster.
  */
-mongoose.connect('mongodb://localhost/noderest', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+require('./database/connection')
 
 app.use(cors()) // Allow access from every frontend.
 app.use(express.json()) // This line turn possible tho return json format data.

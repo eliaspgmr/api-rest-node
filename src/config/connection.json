@@ -1,0 +1,8 @@
+{
+    "dbserver": "mongodb",
+    "host": "localhost",
+    "port": "2701",
+    "database": "noderest",
+    "user": "root",
+    "password": ""
+}
